@@ -1,0 +1,46 @@
+<div class="screen-center">
+  <mat-toolbar>
+    <span>LOGIN</span>
+  </mat-toolbar>
+  <mat-card>
+     <mat-card-content>
+        <form>
+           <mat-form-field class="full-width">
+              <mat-label>Username</mat-label>
+              <input
+              matInput
+              type="text"
+              id="username"
+              placeholder="Username"
+              [(ngModel)]="username"
+              name="username"
+              #em="ngModel"
+            />
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <input
+              matInput
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              [(ngModel)]="password"
+              name="password"
+            />         
+          </mat-form-field>
+        </form>
+        <span>Hint: username and password are "user"</span>
+     </mat-card-content>
+     <mat-card-actions>
+      <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      (click)="onLogin()"
+    >
+      Login
+    </button>   
+  </mat-card-actions>
+  </mat-card>
+</div>
