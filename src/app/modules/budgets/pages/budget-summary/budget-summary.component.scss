@@ -1,0 +1,29 @@
+@import "mixins.scss";
+
+.budget-view {
+  padding: 10px;
+  @include flex-display(baseline, center, row);
+
+  mat-card {
+    width: 50%;
+    margin: 10px;
+  }
+  .budget-info {
+    .month {
+      font-weight: bolder;
+    }
+    .balance {
+      text-align: right;
+      &.positive {
+        color: GREEN;
+      }
+      &.negative {
+        color: RED;
+      }
+    }
+
+    .minor-balance {
+      text-align: right;
+    }
+  }
+}
