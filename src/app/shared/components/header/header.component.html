@@ -1,0 +1,12 @@
+<mat-toolbar class="header">
+    <div class="header__branding-name">
+      <span>Money App</span>
+    </div>
+    <div class="header__user">
+      <span>User Id: {{ user?.id }}</span>
+      <mat-icon (click)="logout()" aria-hidden="false" aria-label="Logout icon"
+        >exit_to_app</mat-icon
+      >
+    </div>
+  </mat-toolbar>
+  
