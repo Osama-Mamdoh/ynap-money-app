@@ -1,16 +1,13 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '@core/models';
-import { environment } from '@environment';
-import { AuthenticationService } from './authentication.service';
+import { RequestService } from '@core/utils';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient) {}
+  constructor(private requestService: RequestService) {}
 
   public getUser() {
-    return this.http.get<User>(`${environment.baseUrl}/user`);
+    return this.requestService.get('/user');
   }
 }
